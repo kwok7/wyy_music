@@ -1,0 +1,4 @@
+<div class="xm-rate-wrap">
+  <xm-rate-item *ngFor="let item of starArray;  index as i;" [index]="i" (itemClick)="handleItemClick($event,i)"
+    (itemHover)="handleItemHover($event,i)"></xm-rate-item>
+</div>
