@@ -1,0 +1,18 @@
+<div style="height: 60px;" *ngIf="fix"></div>
+<header [class.fix]="fix">
+  <div class="container">
+    <div class="logo">
+      <a  routerLink="/">
+        <img src="../../../assets/images/logo2.png" alt="migu-music" />
+        <h1>Angular</h1>
+      </a>
+    </div>
+    <div class="user">
+      <a *ngIf="!user else context" (click)="loginEv.emit()">Log in</a>
+      <ng-template #context>
+        Tim
+        <a>Log off</a>
+      </ng-template>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,32 @@
+<div class="xm-modal-wrap" #modalWrap *ngIf="show" @modalAni>
+  <div class="xm-modal">
+    <div class="head">
+      <p>Angular 9</p>
+    </div>
+    <div class="form-wrap">
+      <form class="form" [formGroup]="formValues" (ngSubmit)="submit()">
+        <div class="form-item">
+          <input formControlName="phone" class="form-control xm-input"
+            [class.xm-input-error]="formControls?.phone!.showErr" placeholder="手机号" type="phone" />
+          <p class="form-control-err" *ngIf="formControls?.phone!.showErr">
+            <span *ngIf="formControls!.phone!.errors!.required">Mobile number required</span>
+            <span *ngIf="formControls!.phone!.errors!.pattern">Wrong mobile number format</span>
+          </p>
+        </div>
+        <div class="form-item">
+          <input formControlName="password" class="form-control xm-input" placeholder="密码" type="text" />
+          <p class="form-control-err" *ngIf="formControls?.password!.showErr">
+            <span *ngIf="formControls!.password!.errors!.required">Password required</span>
+            <span *ngIf="formControls!.password!.errors!.minLength">Minimun 6 digits</span>
+          </p>
+        </div>
+        <div class="btn-wrap">
+          <button class="btn" xmBtn [xmBlock]="true" [disabled]="!formValues.valid">Log in</button>
+        </div>
+      </form>
+      <div class="remember">
+        <label [(ngModel)]="remember" xm-checkbox>Auto login</label>
+      </div>
+    </div>
+  </div>
+</div>
