@@ -8,7 +8,7 @@
 ## Introduction
 This project is a self-practice endeavor aimed at implementing Angular features. Customized components in this project draw inspiration from the NG-Zorro UI library: [NG-Zorro Documentation](https://ng.ant.design/docs/introduce/en). The project itself was inspired by a Chinese broadcasting content website: [Ximalaya](https://www.ximalaya.com/).
 
-Note: The backend server will be available in a separate repository, and all data is sourced from [Ximalaya](https://www.ximalaya.com/).
+Note: The backend server will be available in a separate repository at: [xmly server Repository](https://github.com/kwok7/xmly_server), and all data is sourced from [Ximalaya](https://www.ximalaya.com/).
 
 ## Project Modules
 
